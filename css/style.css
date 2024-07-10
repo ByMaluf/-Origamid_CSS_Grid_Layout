@@ -23,6 +23,7 @@ a {
 img {
   display: block;
   max-width: 100%;
+  border-radius: 4px;
 }
 
 /* GRID GERAL - ESTRUTURA */
@@ -72,18 +73,75 @@ img {
   margin-left: 30px;
 }
 
+/* SIDENAV */
+
 .sidenav {
   grid-area: sidenav;
+  background: #fafbfc;
+  padding: 30px;
 }
+
+.sidenav li a {
+  display: block;
+  min-width: 60px;
+  max-width: 100px;
+  margin: 0 auto 30px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+  transition: 0.1s ease-in-out;
+}
+
+.sidenav li a:hover {
+  background: #b07dfb;
+}
+
+/* CONTEÚDO*/
 
 .content {
   grid-area: content;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
+
+.col-wide {
+  grid-column: 1/-1;
+}
+
+.imagem-1 {
+  grid-row: span 2;
+  align-self: flex-end;
+}
+
+.imagem-2 {
+  align-self: flex-end;
+}
+
+/* ANÚNCIOS */
 
 .anuncios {
   grid-area: anuncios;
+  background: #fafbfc;
+  display: grid;
+  align-content: start;
+  padding: 30px;
+  gap: 30px;
 }
+
+/* RODOPÉ */
 
 .footer {
   grid-area: footer;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+}
+
+.footer p {
+  color: white;
+  text-align: center;
+  padding: 30px;
 }
